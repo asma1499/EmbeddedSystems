@@ -9,7 +9,7 @@
 
 int main (void)
 {
-	DDRA = 0b00001111; //PA0 -> Output == DDRA = 0X0f;
+	DDRB = 0b00001111; //PA0 -> Output == DDRA = 0X0f;
 	/*PORTA = 0b00000001; // PA0 -> HIGH(5V)
 	_delay_ms(1000);
 	PORTA = 0; //PA0->LOW
@@ -21,17 +21,18 @@ int main (void)
 		_delay_ms(1000);
 		PORTA = 0; //PA0->LOW
 		_delay_ms(1000);*/
-		PORTA =0b00000001;
+		PORTB =0b00000001;
 		for (int i = 0 ; i < 4 ; i++)
 		{
 			_delay_ms(250);
-			PORTA <<= 1;
+			PORTB <<= 1;
 
-			if ( PORTA == 0b00010000 ) //PORTA = 0b00001000
+
+			if ( PORTB == 0b00010000 ) //PORTA = 0b00001000
 			{
 				for(int x = 0; x<4; x++)
 				{
-					PORTA >>= 1;
+					PORTB >>= 1;
 					_delay_ms(250);
 
 				}

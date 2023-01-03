@@ -46,11 +46,11 @@ Disassembly of section .text:
 
 0000006c <main>:
   6c:	8f e0       	ldi	r24, 0x0F	; 15
-  6e:	8a bb       	out	0x1a, r24	; 26
+  6e:	87 bb       	out	0x17, r24	; 23
   70:	a1 e0       	ldi	r26, 0x01	; 1
   72:	68 ec       	ldi	r22, 0xC8	; 200
   74:	70 e0       	ldi	r23, 0x00	; 0
-  76:	ab bb       	out	0x1b, r26	; 27
+  76:	a8 bb       	out	0x18, r26	; 24
   78:	40 e0       	ldi	r20, 0x00	; 0
   7a:	50 e0       	ldi	r21, 0x00	; 0
   7c:	21 c0       	rjmp	.+66     	; 0xc0 <main+0x54>
@@ -59,17 +59,17 @@ Disassembly of section .text:
   82:	f1 f7       	brne	.-4      	; 0x80 <main+0x14>
   84:	01 97       	sbiw	r24, 0x01	; 1
   86:	d9 f7       	brne	.-10     	; 0x7e <main+0x12>
-  88:	8b b3       	in	r24, 0x1b	; 27
+  88:	88 b3       	in	r24, 0x18	; 24
   8a:	88 0f       	add	r24, r24
-  8c:	8b bb       	out	0x1b, r24	; 27
-  8e:	8b b3       	in	r24, 0x1b	; 27
+  8c:	88 bb       	out	0x18, r24	; 24
+  8e:	88 b3       	in	r24, 0x18	; 24
   90:	80 31       	cpi	r24, 0x10	; 16
   92:	89 f4       	brne	.+34     	; 0xb6 <main+0x4a>
   94:	20 e0       	ldi	r18, 0x00	; 0
   96:	30 e0       	ldi	r19, 0x00	; 0
-  98:	8b b3       	in	r24, 0x1b	; 27
+  98:	88 b3       	in	r24, 0x18	; 24
   9a:	86 95       	lsr	r24
-  9c:	8b bb       	out	0x1b, r24	; 27
+  9c:	88 bb       	out	0x18, r24	; 24
   9e:	84 ec       	ldi	r24, 0xC4	; 196
   a0:	99 e0       	ldi	r25, 0x09	; 9
   a2:	fb 01       	movw	r30, r22
